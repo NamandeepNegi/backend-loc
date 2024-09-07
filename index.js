@@ -2,8 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
-const port = 5000;
 require('dotenv').config()
+
+const port = process.env.PORT || 5000;
 // 9v9SyLNNu8STddD9
 // Replace <username>, <password>, and <dbname> with your actual MongoDB Atlas credentials
 const mongoURI = process.env.MONGO_URI;
