@@ -3,9 +3,10 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 const port = 5000;
+require('dotenv').config()
 // 9v9SyLNNu8STddD9
 // Replace <username>, <password>, and <dbname> with your actual MongoDB Atlas credentials
-const mongoURI = 'mongodb+srv://neginaman8586:9v9SyLNNu8STddD9@cluster0.bkgsw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const mongoURI = process.env.MONGO_URI;
 
 // Connect to MongoDB Cloud without deprecated options
 mongoose.connect(mongoURI)
